@@ -1,0 +1,34 @@
+pelTetap = 8000
+pelTamu = 10000
+
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+print("   PEMBAYARAN ROGER'S PLAYSTATION & GAME")
+print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+pilihan = int(input("Apakah Anda 1 atau 2? (1 = Pelanggan Tetap, 2 = Pelanggan Tamu): "))
+
+if pilihan == 1:
+    print("Anda Merupakan Pelanggan Tetap")
+    jamBermain = float(input("Jumlah Jam Bermain = "))
+
+    if jamBermain > 6:
+        diskon = (jamBermain * pelTetap) * 0.3
+        total = (jamBermain * pelTetap) - diskon
+    else:
+        total = (jamBermain * pelTetap)
+
+    print("Jumlah Pembayaran Anda Rp.", total)
+
+elif pilihan == 2:
+    print("Anda Merupakan Pelanggan Tamu")
+    jamBermain = float(input("Jumlah Jam Bermain = "))
+
+    if jamBermain > 6:
+        diskon = (jamBermain * pelTamu) * 0.3
+        total = (jamBermain * pelTamu) - diskon
+    else:
+        total = (jamBermain * pelTamu)
+
+    print("Jumlah Pembayaran Anda Rp.", total)
+
+else:
+    print("Pilihan tidak valid")
