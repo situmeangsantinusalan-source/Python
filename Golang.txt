@@ -1,0 +1,41 @@
+package main
+import "fmt"
+
+const pelTetap = 8000
+const pelTamu = 10000
+
+func main(){
+    var pilihan int8
+    var jamBermain float32
+    var diskon1 float32
+    var jlhBayar1 float32
+    fmt.Print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    fmt.Println(" PEMBAYARAN ROGER'S PLAYSTATION & GAME")
+    fmt.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    fmt.println("Apakah anda 1 atau 2 ? Jika 1 pelanggan tetap, jika 2 pelanggan tamu")
+    fmt.scanln(&pilihan)
+    if pilihan==1{
+        fmt.println("Anda pelanggan tetap")
+        fmt.print("Jumlah jam bermain = ")
+        fmt.scanln(&jambermain)
+        if jambermain > 6{
+            diskon = (jambermain * peltetap)*0.3
+            jlhbayar1=(jambermain * peltetap) - diskon
+            fmt.println("Jumlah pembayaran anda = ",jlhbayar1)
+        }else{
+            jlhbayar1=(jambermain * peltetap)
+            fmt.println("Jumlah pembayaran anda = ",jlhbayar1)
+        }
+    }else{
+        fmt.println("Anda pelanggan tamu")
+        fmt.print("Jumlah jam bermain = ")
+        fmt.scanln(&jambermain)
+        if jambezrmain > 6{
+            diskon = (jambermain * peltamu)*0.3
+            jlhbayar1=(jambermain * peltamu) - diskon
+            fmt.println("Jumlah pembayaran anda = ",jlhbayar1)      
+        }else{
+            jlhbayar1=(jambermain * peltamu)
+            fmt.println("Jumlah pembayaran anda = ",jlhbayar1)
+        }
+    }
